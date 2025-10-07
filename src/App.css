@@ -30,19 +30,20 @@ body{
 
 /* Estilo do container do conteúdo principal */
 .content{
-  flex-grow: 1;
+  flex-grow: 1; /* Faz o conteúdo ocupar o espaço restante */
   padding: 2rem;
   background-color: var(--background-color);
 }
 
+/* Estilos para inputs e botões (padrão) */
 input[type="text"],
 input[type="password"]{
   width: 100%;
-  padding: 12px;
+  padding: 12px; 
   margin-bottom: 1rem;
   border: 1px solid var(--border-color);
   border-radius: 8px;
-  box-sizing: border-box;
+  box-sizing: border-box; /* Garante que padding não afete a largura total */
   font-size: 1rem;
   transition: border-color 0.3s;
 }
@@ -66,5 +67,5 @@ button{
 
 button:hover{
   background-color: var(--primary-hover-color);
-  transform: translateY(-2px);
+  transform: translateY(-2px); /* Efeito sutil de elevação */
 }
