@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React from "react";
 import './ContactList.css';
 
 function ContactList({contacts, onEdit, onDelete}){
@@ -6,7 +6,7 @@ function ContactList({contacts, onEdit, onDelete}){
     return(
         <div className="list-container">
             <h2>Lista de Contatos</h2>
-            {contacts.lenght > 0 ? 
+            {contacts.length > 0 ? 
             (
                 <ul className="contact-list">
                     {contacts.map(contact => (

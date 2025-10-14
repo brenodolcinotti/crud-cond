@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React from "react";
 import './Menu.css';
 
 function Menu({onNavigate, onCreate}){
@@ -17,6 +17,10 @@ function Menu({onNavigate, onCreate}){
 
                 <li>
                     <a href="#" onClick={(e) => {e.preventDefault(); onNavigate('welcome');}}>Página Inicial</a>
+                </li>
+
+                <li>
+                    <a href="#" onClick={(e) => {e.preventDefault(); onNavigate('logout');}}>Sair</a>
                 </li>
             </ul>
         </nav>

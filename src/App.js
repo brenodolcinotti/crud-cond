@@ -10,7 +10,7 @@ import ContactForm from './components/ContactForm/ContactForm';
 
 function App(){
   const [isLoggedIn, setIsLoggedIn] = useState(false);
-  const [activeScreen, setActiveScreen] = useState('Welcome');
+  const [activeScreen, setActiveScreen] = useState('welcome');
   const [contacts, setContacts] = useState([
     {id:1, name:'Breno Dolcinotti', phone:'1698636487'},
     {id:2, name:'Neymar Junior', phone:'1699743757'}]);
@@ -69,10 +69,10 @@ function App(){
    }
 
    return(
-    <div>
+    <div className="app-container">
       <Menu onNavigate={handleNavigate} onCreate={showCreateForm}/>
       <main className="content">
-        {activeScreen === 'Welcome' && <Welcome/>}
+        {activeScreen === 'welcome' && <Welcome/>}
         {activeScreen === 'list' && <ContactList contacts={contacts} onEdit={startEdit} onDelete={handleDeleteContact}/>}
         {activeScreen === 'form' && <ContactForm contactToEdit={contactToEdit} onSave={handleSaveContact}/>}
       </main>
